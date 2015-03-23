@@ -161,19 +161,47 @@ If the <a href="https://docs.angularjs.org/api/ng/directive/ngApp" target="_blan
                 </section>
 
                 <section>
+                    <h1>Why Filter Is Important?</h1>
+                </section>
+
+                <section>
+                    <h2>UI Stuff Mixed In Logic</h2>
+                    <pre><code data-trim>
+$.get('ajax/users.json', function(users) {
+    var newUsers = _.map(users, function(user){
+        return {
+            title: item.title.toUpperCase(),
+            name: item.name,
+            birthday: formatDate(item.birthday, 'yyyy-MM-dd'),
+            salary： user.salary + ' RMB'
+        };
+    });
+    var compiled = _.template(tpl);
+    $('#content').append(compiled({
+        users: newUsers
+    }));
+});
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h1>MVC&nbsp;&ne;&nbsp;M-(VC)</h1>
+                </section>
+
+                <section>
                     <h1>Filter In Action</h1>
                 </section>
 
                 <section>
                     <h2>Used In Template</h2>
                     <h4>Format Filter - touppercase</h4>
-                    <iframe width="100%" height="400" src="http://embed.plnkr.co/5QFuCMm6POAWG8YZZ34n/index.html"></iframe>
+                    <iframe width="100%" height="400" class="bg-white" src="http://embed.plnkr.co/5QFuCMm6POAWG8YZZ34n/index.html"></iframe>
                 </section>
 
                 <section>
                     <h2>Used In Template</h2>
                     <h3>Collection Filter - range</h3>
-                    <iframe width="100%" height="400" src="http://embed.plnkr.co/CE8w2FI9euozBfS6dJbF/index.html"></iframe>
+                    <iframe width="100%" height="400" class="bg-white" src="http://embed.plnkr.co/CE8w2FI9euozBfS6dJbF/index.html"></iframe>
                 </section>
 
                 <section>
