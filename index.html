@@ -52,6 +52,11 @@
                 </section>
 
                 <section>
+                    <h2>Mechanism</h2>
+                    <img width="100%" src="img/filter.png">
+                </section>
+
+                <section>
                     <h2>What is AngularJS</h2>
                     <ul>
                         <li>Open-source web application framework maintained by Google</li>
@@ -111,8 +116,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="">
-                                    <img src="img/youtubeps3.png" />
+                                <a href="http://ele.me/place/wtw3sk7519k">
+                                    <img src="img/elem.png" />
                                 </a>
                             </li>
                             <li>
@@ -134,7 +139,7 @@
                     <h2>How AngularJS Bootstrapped</h2>
                     <div style="font-size: 20px;">
                         <div style="float: left; width: 60%;">
-                        Angular initializes automatically upon 
+                        Angular initializes automatically upon
                         <code><span class="typ">DOMContentLoaded</span></code> event or when the <code><span class="pln">angular</span><span class="pun">.</span><span class="pln">js</span></code> script is
 evaluated if at that time <code><span class="pln">document</span><span class="pun">.</span><span class="pln">readyState</span></code> is set to <code><span class="str">'complete'</span></code>. At this point Angular looks
 for the <a href="https://docs.angularjs.org/api/ng/directive/ngApp" target="_blank"><code><span class="pln">ng</span><span class="atn">-</span><span class="pln">app</span></code></a> directive which designates your application root.
@@ -190,7 +195,7 @@ $.get('ajax/users.json', function(users) {
 Service.getDisplayUsers()
 .success(function(displayUsers){
     var compiled = _.template(tpl);
-    $('#content').append(compiled({ 
+    $('#content').append(compiled({
         users: displayUsers
     }));
 });
@@ -223,10 +228,10 @@ Service.getDisplayUsers()
                     <h2>Used In Controller</h2>
                     <pre><code data-trim>
 angular.module('demo', [])
-.controller('DmController', ['$scope', '$filter', 
+.controller('DmController', ['$scope', '$filter',
     function($scope, $filter){
 
-        $scope.displayDate = $filter('date')(new Date(), 'yyyy-MM-dd');
+        $scope.formattedDate = $filter('date')(new Date(), 'yyyy-MM-dd');// 2015-10-12
 
 }]);
                     </code></pre>
@@ -236,11 +241,11 @@ angular.module('demo', [])
                     <h2>Used In Service</h2>
                     <pre><code data-trim>
 angular.module('demo', [])
-.service('DmService', ['$filter', 
+.service('DmService', ['$filter',
     function($filter){
 
         this.getEuroMoney = function(amount){
-            return $filter('currency')(amount, '€');
+            return $filter('currency')(amount, '€');// €26.2
         };
 
 }]);
@@ -252,11 +257,11 @@ angular.module('demo', [])
                 </section>
 
                 <section>
-                    <h2>How About Write Your Own i18n Feature?</h2>
+                    <h2>How About Write Your Own i18n?</h2>
                 </section>
 
                 <section>
-                    <iframe width="100%" height="400" class="bg-white" src="http://embed.plnkr.co/8wCxo6at6Xx1vrY7CgwL/index.html"></iframe>
+                    <iframe width="100%" height="400" class="bg-white" src="http://embed.plnkr.co/qDuTDj71LPxSAdN33Vfc/preview"></iframe>
                 </section>
 
                 <section>
